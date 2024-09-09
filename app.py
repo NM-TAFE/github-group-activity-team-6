@@ -6,6 +6,7 @@ app = Flask(__name__)
 board = [' '] * 9
 current_player = 'X'
 
+
 # NOTE: you cannot use this answer in Portfolio Part 2
 def check_winner():
     # Winning combinations
