@@ -12,13 +12,22 @@
   <body>
     <div class="container">
       <h1>Tic Tac Toe</h1>
+
+
+      <!-- Display player score -->
+      <div class="scores">
+          <p>Player 1 (x) Score: {{ scores['Player 1'] }}</p>
+          <p>Player 2 (0) Score: {{ scores['player 2'] }}</p>
+      </div>
+
+      <!-- Tic-Tac-Toe board -->
       <div class="board">
         {% for index in range(9) %}
-        <a href="{{ url_for('play', cell=index) }}" class="cell"
-          >{{ board[index] }}</a
-        >
+        <a href="{{ url_for('play', cell=index) }}" class="cell">{{ board[index] }}</a>
         {% endfor %}
       </div>
+
+      <!-- Display the result or current player -->
       {% if winner %}
       <p class="result">Player {{ winner }} wins!</p>
       {% elif draw %}
@@ -26,6 +35,8 @@
       {% else %}
       <p class="current-player">Current Player: {{ current_player }}</p>
       {% endif %}
+
+      <!-- Reset game button -->
       <a href="{{ url_for('reset') }}" class="reset-button">Reset Game</a>
     </div>
   </body>

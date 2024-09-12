@@ -56,3 +56,14 @@ body {
   font-size: 1.2em;
   margin-bottom: 20px;
 }
+
+/* Styling for the scores section */
+.scores {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.scores p {
+  margin: 5px 0;
+  font-weight: bold;
+}
